@@ -1,0 +1,470 @@
+body{
+    padding: 0;
+    box-sizing: border-box;
+    height: 1000px;
+  
+    
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap');
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    position: fixed;
+    font-size: 24px;
+   
+    
+}
+.navbar ul{
+    margin-left: 470px;
+    margin-top: -96px;
+    
+}
+.navbar ul li{
+    list-style: none;
+   float: left;
+   padding-left: 20px;
+   
+}
+.navbar ul li a{
+    text-decoration: none;
+    color:black;
+  
+}
+.navbar ul li a .btn {
+    width: 170px;
+    height: 44px;
+    font-size: 24px;
+    background-color: crimson;
+    border: none;
+    color: antiquewhite;
+    cursor: pointer;
+}
+
+.navbar ul li a .btn:hover {
+    border: 2px solid crimson;
+    background-color: white;
+    color: crimson;
+}
+.logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid orange;
+    margin-left: 30px;
+    margin-top: 20px;
+   
+}
+
+
+.container .banner {
+    background: url('h1.png');
+    background-attachment: fixed;
+    background-size: cover;
+    height: 110vh;
+    width: 100%;
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+/*@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.banner h1 {
+    padding-top: 210px;
+    padding-left: 40px;
+    font-family: italic;
+    font-size: 50px;
+    color:rgb(50, 50, 99) ;
+    animation: zoomIn 1s ease-out; /* Apply the zoom effect on page load */
+   .navbar li select{
+  
+    border: none;
+    background-color: transparent;
+    font-size:24px ;
+    width: 130px;
+    cursor: pointer;
+   }
+   .navbar li select option{
+    font-size: 20px;
+    cursor: pointer;
+
+   }
+   
+
+   
+    .banner h1 {
+        padding-top: 210px;
+        padding-left: 60px;
+        font-family: italic;
+        font-size: 50px;
+        display: flex; /* Use flexbox to align words horizontally */
+        gap: 10px; /* Adjust space between words */
+        color:rgb(50, 50, 99);
+        
+       
+    }
+    .banner h1 span {
+        opacity: 0;
+        transform: scale(0.5);
+        display: inline-block;
+        transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    }
+    
+    @keyframes fadeInSlideUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .text {
+        margin-bottom: 100px;
+        animation: fadeInSlideUp 1s ease-out; /* Adjust duration and easing as needed */
+    }
+    
+    .text h2 {
+        padding-top: 130px;
+        font-size: 40px;
+        padding-left: 10px;
+        color: crimson;
+        opacity: 0; /* Start hidden */
+        animation: fadeInSlideUp 1s ease-out forwards 0.5s; /* Delay to sync with .text */
+    }
+    
+    .text p {
+        margin-top: -130px;
+        margin-left: 400px;
+        float: right;
+        font-size: 20px;
+        letter-spacing: 2px;
+        line-height: 2;
+        opacity: 0; /* Start hidden */
+        animation: fadeInSlideUp 1s ease-out forwards 1s; /* Delay to appear after h2 */
+    }
+    
+    .faq {
+        max-width: 800px;
+        margin-left:10px;
+        padding: 10px;
+        margin-bottom: 60px;
+        margin-left: 250px;
+    
+       
+    }
+    .faq h1{
+        font-size: 50px;
+        color:deeppink;
+    }
+    .faq p{
+        font-size: 17px;
+        
+    }
+    
+    .faq-item {
+        margin-bottom: 20px;
+    }
+    
+    .faq-item button {
+        font-size: 25px;
+        padding: 10px;
+        cursor: pointer;
+        text-align: left;
+        width: 100%;
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        color: black;
+    }
+    
+    .faq-item button:hover {
+     
+        border: 1px solid #2a9d8f;
+        color:#2a9d8f;
+        background-color: #faf5f5;
+    }
+    
+    .faq-content {
+        margin-top: 10px;
+        font-size: 100px;
+        line-height: 1.6;
+        display: none;
+    }
+    
+    /* Circle or bullet symbol */
+    .toggle-symbol {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        border-radius: 50%;
+        background-color: #000;
+        color: white;
+        text-align: center;
+        line-height: 18px;
+        font-size: 14px;
+        font-weight: bold;
+        vertical-align: middle;
+    }
+    .toggle-symbol:hover{
+        border: 1px solid #2a9d8f;
+        color:#2a9d8f;
+        background-color: #faf5f5;
+    }
+    
+    /* Modify button appearance to include circle symbols */
+    .faq-item button span.toggle-symbol {
+        margin-right: 20px;
+    }
+    
+    /* Style for the expanded FAQ content */
+    .faq-content ul {
+        list-style: inside disc;
+    }
+    
+    .faq-content ul li {
+        margin-bottom: 59px;
+    }
+    header.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        box-sizing: border-box;
+        background-color: white;
+        z-index: 1000; /* Ensure it stays above other elements */
+        box-shadow: 0 1px 13px;
+    }
+    
+    
+    header.sticky .navbar li{
+        padding-top: 30px;
+        font-size: 24px;
+    }
+    header.sticky .navbar li a{
+    
+        color: #111;
+    
+    }
+    header.sticky .navbar li a:hover{
+        color:#ff0157
+    }
+    header.sticky .logo img{
+        margin-left: 30px;
+        margin-top: 10px;
+        width: 70px;
+        height: 70px;
+    }
+    footer{
+        display: flex;
+        justify-content: space-between ;
+        box-sizing: border-box;
+        
+         background-color: black;
+         height: 72vh;
+      
+         margin: 0px 20px;
+         margin-bottom: 3px;
+         
+         width: 96%;
+    }
+    .symbols .logo1{
+        padding: 30px;
+    }
+    .symbols .logo1 p{
+        color: aliceblue;
+        margin-top: -27px;
+        margin-left: 40px;
+    }
+    .symbols .logo1 img{
+
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 2px solid orange;
+    }
+    .symbols .logo2{
+        margin-top: -70px;
+        margin-right: 90px;
+       
+        float: right;
+    }
+    .symbols .logo2 i{
+       
+        display: inline;
+       justify-content: center;
+        margin-left: 17px;
+      box-sizing: border-box;
+        width: 45px;
+        height: 45px;
+        font-size: 25px;
+        border-radius: 50%;
+        padding: 7px;
+        border: 2px solid grey;
+        color: grey
+    }
+    .text {
+       float: left;
+    }
+    .text h3{
+        color: rgb(100, 97, 97);
+        font-size: 23px;
+        margin-left: 60px;
+         padding-bottom: 10px;
+         
+         border-bottom: solid 2px grey;
+         width: 240px
+    }
+    .text  li {
+        list-style-type: none;
+        font-size: 20px;
+        margin-top: -10px;
+      
+        padding-bottom: 10px;
+         
+       border-bottom: solid 2px grey;
+       margin-left: 60px;
+       width: 240px;
+       margin-bottom: 20px;
+    }
+    .text  i{
+        color: antiquewhite;
+        font-size: 15px;
+        margin-left: 1px;
+
+    }
+    .text li a{
+        text-decoration: none;
+        color: rgb(199, 190, 178);
+       margin-left: 10px;
+       
+    }
+    .container1 {
+        margin: 30px;
+        text-align: center;
+    }
+
+    .container1 h1 {
+        color: darkblue;
+        font-size: 32px;
+    }
+
+    .container1 p{
+        text-align: start;
+    
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .container1 img {
+        height: 500px;
+        width: 100%;
+        transition: opacity 0.3s;
+    }
+
+    .container1 img:hover {
+        opacity: 0.7;
+    }
+
+    .industry-section {
+        display: flex;
+        align-items: center;
+        margin: 50px 0;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 15px;
+    }
+    .industry-section img{
+        width: 600px;
+        height: 300px;
+    }
+
+    .industry-section:nth-child(even) .industry-content {
+        order: -1; /* Flip order on even sections for alternate layout */
+    }
+
+    .industry-image {
+        width: 50%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 15px;
+        margin-right: 20px;
+        transition: opacity 0.3s;
+    }
+
+    .industry-image:hover {
+        opacity: 0.7;
+    }
+
+    .industry-content {
+        width: 50%;
+        padding: 20px;
+        text-align: left;
+    }
+    .industry-content img{
+        width: 70px;
+        height: 70px;
+    }
+
+    .icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 3px solid #395FA5;
+        padding: 3px;
+    }
+
+    .industry-content h2 {
+        font-size: 24px;
+        color: #395FA5;
+        margin: 20px 0;
+    }
+
+    .industry-content p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    .industry-content  li{
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .btn {
+        display: inline-block;
+        color: orangered;
+        border: 2px solid orangered;
+        background-color: aliceblue;
+        font-size: 18px;
+        padding: 8px 16px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .btn:hover {
+        background-color: orangered;
+        color: white;
+    }
+
+    .additional-info {
+        margin-top: 10px;
+        font-size: 16px;
+        color: #333;
+    }

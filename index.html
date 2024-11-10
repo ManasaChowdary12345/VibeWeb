@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Vibe website</title>
+  
+    
+     
+</head>
+<body>
+
+    <header class="stick">
+        <div class="navbar">
+
+            <div class="logo">
+                <img src="logo1.png">
+            </div>
+            <ul>
+               
+                <li>
+                    <select id="dropdown" onchange="navigate()">
+                      <option value="" selected>About Us</option>
+                      <option value="vibe.html">Company</option>
+                      <option value="pricing.html">Pricing</option>
+                      <option value="pricing.html">Insights</option>
+                      <option value="pricing.html">Privacy</option>
+                    </select>
+                  </li>
+                <li> <a href="portfoli.html">Portfolio</a></li>
+                <li> <a href="tech.html">Technologies</a></li>
+               
+                <li> <a href="careers.html">Careers</a></li>
+                <li> <a href="contact.html" > <button class="btn">Contact Us</button></a></li>
+                
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+     <div class="banner">
+        <h1>
+            <span>VIBE</span>
+            <span>-</span>
+            <span>Virtual</span>
+            <span>Intelligence</span>
+            <span>Bold</span>
+            <span>Execution</span>
+        </h1>
+    </div>
+    <div class="text">
+        <h2>who we are</h2>
+        <p>
+            Welcome to Vibe! We are a passionate team dedicated to transforming businesses through innovative software solutions. Our mission is to empower organizations with user-friendly tools that drive success and efficiency. At Vibe, we believe in collaboration, integrity, and excellence, always striving to exceed expectations. Join us on this exciting journey as we harness the power of Virtual Intelligence and Bold Execution to help you achieve your goals!
+            
+        </p>
+    </div>
+
+    <div class="container1">
+        <h1>INDUSTRIES</h1>
+        <p>We work on cutting-edge technologies to enhance the existence of our customers in the digital world. Having deep knowledge of dominant industries, our expert team of developers, testers, and consultants will suggest the most significant combination of technologies that fit best for your project in terms of cost, time, and quality. At TPS, we work with common software environments, coding languages, or APIs. However, we are open to discussing if your expectations are not included in these.</p>
+        <img src="industries.png" alt="Industries Image">
+    
+        <!-- Industry 1 -->
+        <div class="industry-section">
+            <img src="ecom.png" alt="E-Commerce Image" class="industry-image">
+            <div class="industry-content">
+                <img src="i1.png" alt="E-Commerce Icon" class="icon">
+                <h2>E-COMMERCE AND RETAIL DISTRIBUTION</h2>
+                <p>As a leading software solution company, we have always focused on improving productivity and delivering innovative solutions to our customers. At TPS Software, we empower you with end-to-end B2B and B2C software solutions for E-commerce and retail distribution.</p>
+                <button class="btn" onclick="toggleView('demo1', this)">VIEW MORE</button>
+                <div id="demo1" class="additional-info"></div>
+            </div>
+        </div>
+    
+        <!-- Industry 2 -->
+        <div class="industry-section">
+            <img src="book.png" alt="Education Image" class="industry-image">
+            <div class="industry-content">
+                <img src="i2.png" alt="Education Icon" class="icon">
+                <h2>EDUCATION INDUSTRY</h2>
+                <p>The education industry is thriving hard to become more productive and advance. At TPS Software, we work in partnership with educators to design and develop software solutions they need to help their students succeed.</p>
+                <button class="btn" onclick="toggleView('demo2', this)">VIEW MORE</button>
+                <div id="demo2" class="additional-info"></div>
+            </div>
+        </div>
+    
+        <!-- Industry 3 -->
+        <div class="industry-section">
+            <img src="soft.png" alt="Independent Software Vendor Image" class="industry-image">
+            <div class="industry-content">
+                <img src="i3.png" alt="Software Icon" class="icon">
+                <h2>INDEPENDENT SOFTWARE VENDOR</h2>
+                <p>Development of truly usable and successful solutions takes more than just technology. It requires an in-depth understanding of the industry, an appreciation of its unique challenges and opportunities, and familiarity with how employees work.</p>
+                <button class="btn" onclick="toggleView('demo3', this)">VIEW MORE</button>
+                <div id="demo3" class="additional-info"></div>
+            </div>
+        </div>
+    
+        <!-- Industry 4 -->
+        <div class="industry-section">
+            <img src="f.png" alt="Finance Image" class="industry-image">
+            <div class="industry-content">
+                <img src="i4.png" alt="Finance Icon" class="icon">
+                <h2>FINANCE AND INSURANCE</h2>
+                <p>Fintech is a new financial industry that utilizes technology to automate and enhance financial activities. Fintech companies are merging financial and technical expertise to create innovative solutions transforming the world of finance.</p>
+                <button class="btn" onclick="toggleView('demo4', this)">VIEW MORE</button>
+                <div id="demo4" class="additional-info"></div>
+            </div>
+        </div>
+    
+        <!-- Industry 5 -->
+        <div class="industry-section">
+            <img src="health.png" alt="Healthcare Image" class="industry-image">
+            <div class="industry-content">
+                <img src="i5.png" alt="Healthcare Icon" class="icon">
+                <h2>HEALTH CARE</h2>
+                <p>Health IT is evolving rapidly, and mobile applications are innovating the industry to deliver high-end business management systems and patient experiences. TPS Software converts your dream into technology to overcome digital challenges.</p>
+                <button class="btn" onclick="toggleView('demo5', this)">VIEW MORE</button>
+                <div id="demo5" class="additional-info"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Toggle View Function
+        function toggleView(demoId, button) {
+            const demoDiv = document.getElementById(demoId);
+    
+            if (demoDiv.innerHTML === "") {
+                let additionalContent;
+                switch (demoId) {
+                    case 'demo1':
+                        additionalContent = `
+                            <p>Your business growth with cutting-edge technology to provide you valuable mobile and web solutions.</p>
+                            <p>The scope of services includes:</p>
+                            <ul>
+                                <li>Ecommerce App Development</li>
+                                <li>Web Application and Portal</li>
+                                <li>B2B E-Commerce Solutions</li>
+                                <li>B2C E-Commerce Solutions</li>
+                                <li>POS Systems Integration</li>
+                            </ul>`;
+                        break;
+                    case 'demo2':
+                        additionalContent = `
+                            <p>We have talented developers and designers with great experience in developing endless E-learning and management software solutions.</p>
+                            <p>The scope of services includes:</p>
+                            <ul>
+                                <li>Online E-Learning Solutions</li>
+                                <li>Remote Learning Websites</li>
+                                <li>Institute Management Software</li>
+                                <li>Mobile Learning Applications</li>
+                                <li>Application Development and Maintenance</li>
+                            </ul>`;
+                        break;
+                    case 'demo3':
+                        additionalContent = `
+                            <p>With a strong focus on dominant industries and quick adoption of cutting-edge technologies, we deliver value in a faster and more cost-efficient manner.</p>
+                            <p>The scope of services includes:</p>
+                            <ul>
+                                <li>Product engineering services</li>
+                                <li>Fast go-to-market development</li>
+                                <li>Independent test center</li>
+                                <li>Porting & migration</li>
+                            </ul>`;
+                        break;
+                    case 'demo4':
+                        additionalContent = `
+                            <p>As a leading software development firm, we provide industry-leading software engineering services and solutions tailored to your needs.</p>
+                            <p>The scope of services includes:</p>
+                            <ul>
+                                <li>Smart Contract Development</li>
+                                <li>Decentralized App Development</li>
+                                <li>Private Blockchain Development</li>
+                                <li>Crypto Wallet Development</li>
+                                <li>Exchange Platforms</li>
+                                <li>Insurance Management</li>
+                                <li>Custom Blockchain Solutions</li>
+                                <li>Enterprise Application Integration (EAI)</li>
+                            </ul>`;
+                        break;
+                    case 'demo5':
+                        additionalContent = `
+                            <p>Our expert team collaborates with healthcare companies to design and develop software solutions that enhance patient care.</p>
+                            <p>The scope of services includes:</p>
+                            <ul>
+                                <li>Health Management Information Systems (HMIS)</li>
+                                <li>Web Applications and Portals</li>
+                                <li>Electronic Medical Records (EMR)</li>
+                                <li>Hospital Management Software</li>
+                                <li>Enterprise Content Management</li>
+                            </ul>`;
+                        break;
+                }
+                demoDiv.innerHTML = additionalContent;
+                button.innerText = "VIEW LESS";
+            } else {
+                demoDiv.innerHTML = "";
+                button.innerText = "VIEW MORE";
+            }
+        }
+    </script>
+    
+    
+  
+    
+    <div class="faq">
+        <h1>Frequently Asked Questions</h1>
+
+        <div class="faq-item">
+            <button class="btn" onclick="toggleFAQ('faq1', this)">
+                <span class="toggle-symbol">+</span> I need to develop an application – where do I start?
+            </button>
+            <p id="faq1" class="faq-content" style="display: none;">
+                There are multiple ways to start an application development. The most profound approach is to answer three core questions:<br><br>
+                1. Which business goals are you trying to achieve?<br>
+                2. What is the measurable result you want to get?<br>
+                3. Do you have resources to develop an application?<br><br>
+                Once you have the answers, the next step is getting in touch with professionals capable of developing an application. We have a comprehensive free whitepaper on how to find reliable software development companies and encourage you to read it.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <button class="btn" onclick="toggleFAQ('faq2', this)">
+                <span class="toggle-symbol">+</span> I want to develop software. How much will it cost?
+            </button>
+            <p id="faq2" class="faq-content" style="display: none;">
+                Software development costs depend on many factors, such as:<br/>
+                
+                    1.The scale of the project (e.g., a simple two-page website or a complex enterprise system).<br/>
+                   2.Innovations needed (e.g., extra research and development or using a standard tech stack).<br/>
+                    3.The experience of the development company in the relevant tech and business areas.
+                   Outsourcing rates for software development.<br/>
+              
+                Every project is unique, so costs can vary. We offer free initial analysis and estimation to understand your needs better. Feel free to reach out!
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <button class="btn" onclick="toggleFAQ('faq3', this)">
+                <span class="toggle-symbol">+</span> Why does my project require a Business Analyst?
+            </button>
+            <p id="faq3" class="faq-content" style="display: none;">
+                A business analyst translates your business goals into clear software requirements. For example, they turn a goal like “optimize business processes” into specific needs such as “the software must offer cloud storage for the accounting department to upload and view documents.”
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <button class="btn" onclick="toggleFAQ('faq4', this)">
+                <span class="toggle-symbol">+</span> What do I need to know before contacting you?
+            </button>
+            <p id="faq4" class="faq-content" style="display: none;">
+                From you, we’d appreciate a product description or a list of functional requirements.
+                <br> Here’s what we offer:<br/>
+                
+                   * A free project quote after an initial call to discuss details, followed by cost and timeline estimates within a week.<br/>
+                    * An NDA from the start to ensure your information stays secure.<br/>
+                    * Honest, transparent communication, with timesheet reports and effective risk management.<br/>
+                
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <button class="btn" onclick="toggleFAQ('faq5', this)">
+                <span class="toggle-symbol">+</span> I want to be involved in the development process. Will it be ok?
+            </button>
+            <p id="faq5" class="faq-content" style="display: none;">
+                We believe that a web development company can provide top-level services and deliver value only if clients are involved in the process. The level of involvement can vary—from being a product owner who provides business requirements for us to translate into a software solution, to actively participating in analysis, design, or development. Regardless, we ensure a smooth process with regular communication.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function toggleFAQ(faqId, button) {
+            // Get all FAQ content paragraphs
+            const faqs = document.querySelectorAll('.faq-content');
+            const symbols = document.querySelectorAll('.toggle-symbol');
+            
+            // Loop through each FAQ and hide them
+            faqs.forEach(function(faq) {
+                if (faq.id !== faqId) {
+                    faq.style.display = "none";
+                }
+            });
+
+            // Get the selected FAQ and toggle its display
+            const selectedFAQ = document.getElementById(faqId);
+            const selectedSymbol = button.querySelector('.toggle-symbol');
+
+            // Toggle FAQ content visibility
+            if (selectedFAQ.style.display === "none" || selectedFAQ.style.display === "") {
+                selectedFAQ.style.display = "block";  // Show the selected FAQ
+                selectedSymbol.textContent = "−";  // Change symbol to minus
+            } else {
+                selectedFAQ.style.display = "none";  // Hide the selected FAQ
+                selectedSymbol.textContent = "+";  // Change symbol to plus
+            }
+        }
+    </script>
+    
+       <footer>
+        <div class="page">
+            <div class="list">
+                <div class="symbols">
+                   <div class="logo1">
+                    <img src="logo1.png" alt=""> 
+                    <p>VIBE</p>
+                   </div>
+                   <div class="logo2">
+                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-brands fa-facebook" ></i>
+                    <i class="fa-brands fa-instagram" ></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fas fa-phone"></i>
+                   </div>
+                </div>
+                <div class="text">
+                    <h3>About Us</h3>
+                    <li><i class="fa fa-angle-right"></i><a href="vibe.html">Company Info</a></li>
+                   <li> <i class="fa fa-angle-right"></i><a href="pricing.html">Pricing</a></li>
+                    <li><i class="fa fa-angle-right"></i><a href="insight.html">Insight</a></li>
+                    <li><i class="fa fa-angle-right"></i><a href="privacy.html">Privacy</a></li>
+                </div>
+                <div class="text">
+                    <h3>Portfolio</h3>
+                    <li><i class="fa fa-angle-right"></i><a href="portfoli.html">Core Focus Areas</a></li>
+                   <li> <i class="fa fa-angle-right"></i><a href="portfoli.html">Product Offerings</a></li>
+                    <li><i class="fa fa-angle-right"></i><a href="portfoli.html">Industry Application</a></li>
+                    <li><i class="fa fa-angle-right"></i><a href="portfoli.html">Innovations</a></li>
+                    <li><i class="fa fa-angle-right"></i><a href="portfoli.html">Partner Ecosystem</a></li>
+                </div>
+                <div class="text">
+                    <h3>Technologies</h3>
+                    <li><i class="fa fa-angle-right"></i><a href="tech/index.html">Node Js</a></li>
+                    
+                   <li> <i class="fa fa-angle-right"></i><a href="tech/index.html">Java</a></li>
+                    <li><i class="fa fa-angle-right"></i><a href="tech/index.html">Ruby on Rail</a></li>
+                    <li><i class="fa fa-angle-right"></i><a href="tech/index.html">AI development</a></li>
+                   <li> <i class="fa fa-angle-right"></i><a href="tech/index.html">Ml development</a></li>
+                    <li><i class="fa fa-angle-right"></i><a href="tech/index.html">Blockchain</a></li>
+                </div>
+                <div class="text">
+                    <h3>Careers</h3>
+                    <li><i class="fa fa-angle-right"></i><a href="careers.html">NET Developer</a></li>
+                   <li> <i class="fa fa-angle-right"></i><a href="careers.html">Java Developer</a></li>
+                    <li><i class="fa fa-angle-right"></i><a href="careers.html">QA Engineer</a></li>
+                    <li><i class="fa fa-angle-right"></i><a href="careers.html">Business Analyst</a></li>
+                    <li> <i class="fa fa-angle-right"></i><a href="careers.html">Salesforce Developer</a></li>
+                    
+                </div>
+               
+                </div>
+            </div>
+       </footer>
+       
+       <script type="text/javascript">
+        window.addEventListener('scroll',function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky",window.scrollY > 0);
+        });
+    </script>
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const words = document.querySelectorAll(".banner h1 span");
+            words.forEach((word, index) => {
+                setTimeout(() => {
+                    word.style.opacity = 1; // Show the word
+                    word.style.transform = "scale(1)"; // Apply the zoom effect
+                }, index * 500); // Delay for each word
+            });
+        });
+    </script>
+   <script>
+    function navigate() {
+      // Get the selected value from the dropdown
+      const dropdown = document.getElementById("dropdown");
+      const selectedValue = dropdown.value;
+  
+      // If a valid value is selected, navigate to the URL
+      if (selectedValue) {
+        window.location.href = selectedValue;
+        
+        // Reset the dropdown to "About Us" after redirection
+        dropdown.value = "";
+      }
+    }
+  </script>
+      
+</body>
+</html>
